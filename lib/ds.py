@@ -12,6 +12,9 @@ class SimpleQueue(Generic[T]):
     def __init__(self, *args: T) -> None:
         self.__content = list(args)
 
+    def len(self) -> int:
+        return len(self.__content)
+
     def push(self, item: T) -> None:
         self.__content.append(item)
 
